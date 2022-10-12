@@ -1,0 +1,89 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data/deaths_by_country_cause_and_year.csv"
+  },
+  "title": "Deaths per 100K people for top causes of death over time",
+  "width": "container",
+  "height": "container",
+  "encoding": {
+    "y": {
+      "field": "DEATHS_100K",
+      "type": "quantitative",
+      "title": "Deaths per 100K people"
+    },
+    "x": {
+      "field": "YEAR",
+      "axis": {"domain": false, "grid": false, "ticks": false},
+      "type": "temporal",
+      "title": "Year"
+    },
+    "color": {
+      "field": "GHE_CAUSE_TITLE",
+      "scale": {"range": ["#022F59", "#44649B", "#6A9CED", "#F6C531", "#DEC7A8", "#EE862E"]},
+      "title": "Cause of death",
+      "legend": {
+        "title": null,
+        "orient":"bottom",
+        "labelExpr": "datum.label === 'Ischaemic heart disease' ? 'Ischaemic...' : datum.label === 'Stroke' ? 'Stroke' : datum.label === 'Chronic obstructive pulmonary disease' ? 'Chronic...' : datum.label === 'Lower respiratory infections' ? 'Lower...' : datum.label === 'Trachea, bronchus, lung cancers' ? 'Trachea, ...' : 'Alzheimer...'"
+      }
+    },
+    "tooltip": [
+      {"field": "YEAR", "type": "temporal", "title": "Year", "format": "%Y"},
+      {"field": "DEATHS_100K", "type": "quantitative", "title": "Deaths per 100K people", "format": ".2f"},
+      {"field": "GHE_CAUSE_TITLE", "type": "nominal", "title": "Cause"},
+      {"field": "COUNTRY", "type": "nominal", "title": "Country"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": true
+      },
+      "params": [{ 
+        "select": {
+          "type": "point",
+          "fields": ["COUNTRY"]
+        },
+        "name" : "CountrySelect",
+        "bind": {
+          "input": "select",
+          "options": [
+            "Australia",
+            "Belgium",
+            "Brazil",
+            "Canada",
+            "China",
+            "France",
+            "Germany",
+            "India",
+            "Indonesia",
+            "Iran",
+            "Italy",
+            "Japan",
+            "Mexico",
+            "Netherlands",
+            "Poland",
+            "Russia",
+            "Saudi Arabia",
+            "South Korea",
+            "Spain",
+            "Sweden",
+            "Switzerland",
+            "Thailand",
+            "Turkey",
+            "UK",
+            "USA"
+          ],
+          "name": "Select Country: "
+        },
+        "value": "Australia"
+      }],
+      "transform":[
+        {"filter": {"param": "CountrySelect"}},
+        {"filter": "datum.GHE_CAUSE_TITLE === 'Ischaemic heart disease' || datum.GHE_CAUSE_TITLE === 'Stroke' || datum.GHE_CAUSE_TITLE === 'Chronic obstructive pulmonary disease' || datum.GHE_CAUSE_TITLE === 'Lower respiratory infections' || datum.GHE_CAUSE_TITLE === 'Trachea, bronchus, lung cancers' || datum.GHE_CAUSE_TITLE === 'Alzheimer disease and other dementias'"}
+      ]
+    }
+  ]
+}

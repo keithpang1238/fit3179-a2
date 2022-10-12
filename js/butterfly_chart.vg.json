@@ -1,0 +1,81 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "data/deaths_by_age_and_sex_2019.csv"},
+  "title": "Deaths by Sex and Age Group",
+  "width": "container",
+  "height": "container",
+  "mark": "bar",
+  "params": [{ 
+      "select": {
+        "type": "point",
+        "fields": ["COUNTRY"]
+      },
+      "name" : "CountrySelect",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Australia",
+          "Belgium",
+          "Brazil",
+          "Canada",
+          "China",
+          "France",
+          "Germany",
+          "India",
+          "Indonesia",
+          "Iran",
+          "Italy",
+          "Japan",
+          "Mexico",
+          "Netherlands",
+          "Poland",
+          "Russia",
+          "Saudi Arabia",
+          "South Korea",
+          "Spain",
+          "Sweden",
+          "Switzerland",
+          "Thailand",
+          "Turkey",
+          "UK",
+          "USA"
+        ],
+        "name": "Select Country: "
+      },
+      "value": "Australia"
+    }],
+    "transform":[
+      {"filter": {"param": "CountrySelect"}},
+      {"calculate": "datum.SEX_CODE == 'Female' ? -datum.DEATHS : datum.DEATHS", "as": "signed_deaths"}
+  ],
+  "encoding": {
+    "y": {
+      "axis": null,
+      "field": "AGEGROUP_CODE",
+      "sort": "descending",
+      "title": "Age Group"
+    },
+    "x": {
+      "axis": null,
+      "aggregate": "sum", "field": "signed_deaths",
+      "title": "Deaths"
+    },
+    "color": {
+      "field": "SEX_CODE",
+      "scale": {"range": ["#6A9CED", "#EE862E"]},
+      "legend": {
+        "orient": "bottom",
+        "title": null
+      }
+    },
+    "tooltip": [
+      {"field": "SEX_CODE", "type": "nominal", "title": "Sex"},
+      {"field": "AGEGROUP_CODE", "type": "nominal", "title": "Age Group"},
+      {"field": "DEATHS", "type": "quantitative", "title": "Total Deaths", "format": ".1f"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "data/deaths_by_country_and_cause_2019.csv"},
+  "title": "Deaths by Country and Cause",
+  "width": "container",
+  "height": "container",
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "COUNTRY",
+      "sort": "ascending",
+      "title": "Country"
+    },
+    "y": {
+      "field": "GHE_CAUSE_TITLE",
+      "sort": "ascending",
+      "title": "Cause"
+    },
+    "color": {
+      "field": "DEATHS_100K",
+      "scale": {"scheme": "blues"},
+      "bin": {"maxbins": 10},
+      "title": "Deaths per 100K people",
+      "type": "quantitative",
+      "legend": {"orient": "bottom"}
+    },
+    "tooltip": [
+      {"field": "COUNTRY", "type": "nominal", "title": "Country"},
+      {"field": "GHE_CAUSE_TITLE", "type": "nominal", "title": "Cause"},
+      {"field": "DEATHS_100K", "type": "quantitative", "title": "Deaths per 100K people", "format": ".1f"}
+    ]
+  },
+  "transform": [
+    {"filter": "datum.MAX_DEATHS_100K_BY_CAUSE > 10"}
+  ],
+  "config": {
+    "view": {
+      "stroke": "transparent",
+      "strokeWidth": 0
+    },
+    "axis": {
+      "grid": false,
+      "domain": false
+    }
+  }
+}
