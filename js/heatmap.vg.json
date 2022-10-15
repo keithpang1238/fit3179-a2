@@ -5,6 +5,9 @@
   "width": "container",
   "height": "container",
   "mark": "rect",
+  "transform": [
+    {"filter": "datum.MAX_DEATHS_100K_BY_CAUSE > 35"}
+  ],
   "encoding": {
     "x": {
       "field": "COUNTRY",
@@ -14,12 +17,14 @@
     "y": {
       "field": "GHE_CAUSE_TITLE",
       "sort": "ascending",
-      "title": "Cause"
+      "title": "Cause*"
     },
     "color": {
-      "field": "DEATHS_100K",
-      "scale": {"scheme": "blues"},
       "bin": {"maxbins": 10},
+      "field": "DEATHS_100K",
+      "scale": {
+        "scheme": "blues"
+      },
       "title": "Deaths per 100K people",
       "type": "quantitative",
       "legend": {"orient": "bottom"}
@@ -30,9 +35,6 @@
       {"field": "DEATHS_100K", "type": "quantitative", "title": "Deaths per 100K people", "format": ".1f"}
     ]
   },
-  "transform": [
-    {"filter": "datum.MAX_DEATHS_100K_BY_CAUSE > 10"}
-  ],
   "config": {
     "view": {
       "stroke": "transparent",

@@ -84,6 +84,20 @@
         "stroke": "#777",
         "strokeWidth": 0.15
       }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 11,
+        "dy": -20,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"value": "Countries with older populations have more per capita deaths"},
+        "color": {"value": "black"}
+      } 
     }
   ]
 }

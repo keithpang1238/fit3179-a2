@@ -4,7 +4,6 @@
   "title": "Deaths by Country, Average Age and Sex Ratio",
   "width": "container",
   "height": "container",
-  "mark": "circle",
   "transform": [
     {
       "aggregate": [
@@ -15,16 +14,25 @@
         },
         {
           "op": "mean",
-          "field": "GENDER_RATIO",
-          "as": "m_f_ratio"
+          "field": "GENDER_IMBALANCE",
+          "as": "gender_imbalance"
         },
         {
           "op": "sum",
           "field": "WEIGHTED_DEATHS_100K",
           "as": "total_deaths_100k"
+        },
+        {
+          "op": "mean",
+          "field": "GREATER_GENDER",
+          "as": "greater_gender"
         }
       ],
       "groupby": ["COUNTRY"]
+    },
+    {
+      "calculate": "datum.greater_gender == 1 ? 'Male' : 'Female'",
+      "as": "nominal_greater_gender"
     }
   ],
   "encoding": {
@@ -39,21 +47,73 @@
       "title": "Deaths per 100K people",
       "type": "quantitative",
       "scale": {"zero": false}
-    },
-    "size": {
-      "field": "m_f_ratio",
-      "title": "M/F Ratio",
-      "type": "quantitative",
-      "scale": {"zero": false},
-      "legend": {"orient": "bottom-right"}
-    },
-    "tooltip": [
-      {"field": "COUNTRY", "type": "nominal", "title": "Country"},
-      {"field": "m_f_ratio", "type": "quantitative", "title": "M/F Ratio", "format": ".2f"},
-      {"field": "average_age", "type": "quantitative", "title": "Average Age", "format": ".1f"},
-      {"field": "total_deaths_100k", "type": "quantitative", "title": "Deaths per 100K people", "format": ".1f"}
-    ]
+    }
   },
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "opacity": 1
+      },
+      "encoding": {
+        "size": {
+          "field": "gender_imbalance",
+          "title": "Gender Imbalance",
+          "type": "quantitative",
+          "legend": {"orient": "bottom-right", "format": ".0%"}
+        },
+        "color": {
+          "field": "nominal_greater_gender",
+          "title": "Greater Gender",
+          "type": "nominal",
+          "scale": {"range": ["#6A9CED", "#EE862E"]},
+          "legend": {"orient": "bottom-right"}
+        },
+        "tooltip": [
+          {"field": "COUNTRY", "type": "nominal", "title": "Country"},
+          {"field": "average_age", "type": "quantitative", "title": "Average Age", "format": ".1f"},
+          {"field": "gender_imbalance", "type": "quantitative", "title": "Gender Imbalance", "format": ".0%"},
+          {"field": "nominal_greater_gender", "type": "nominal", "title": "Greater Gender"},
+          {"field": "total_deaths_100k", "type": "quantitative", "title": "Deaths per 100K people", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "fontSize": 11,
+        "dx": -12,
+        "fontStyle": "italic"
+      },
+      "transform": [{
+        "filter": "datum.COUNTRY === 'Russia'"
+      }],
+      "encoding": {
+        "text": {"value": "Russia is a clear outlier in the trend"},
+        "color": {"value": "black"}
+      } 
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 11,
+        "dy": -20,
+        "fontStyle": "italic"
+      },
+      "transform": [{
+        "filter": "datum.COUNTRY === 'Italy'"
+      }],
+      "encoding": {
+        "text": {"value": "Countries with older populations have more per capita deaths"},
+        "color": {"value": "black"}
+      } 
+    }
+  ],
   "config": {
     "view": {"stroke": null},
     "axis": {"grid": false}

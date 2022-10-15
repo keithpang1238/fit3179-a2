@@ -4,8 +4,8 @@
   "title": "Deaths by Sex and Age Group",
   "width": "container",
   "height": "container",
-  "mark": "bar",
-  "params": [{ 
+  "params": [
+    { 
       "select": {
         "type": "point",
         "fields": ["COUNTRY"]
@@ -43,37 +43,43 @@
         "name": "Select Country: "
       },
       "value": "Australia"
-    }],
-    "transform":[
-      {"filter": {"param": "CountrySelect"}},
-      {"calculate": "datum.SEX_CODE == 'Female' ? -datum.DEATHS : datum.DEATHS", "as": "signed_deaths"}
+    }
   ],
-  "encoding": {
-    "y": {
-      "axis": null,
-      "field": "AGEGROUP_CODE",
-      "sort": "descending",
-      "title": "Age Group"
-    },
-    "x": {
-      "axis": null,
-      "aggregate": "sum", "field": "signed_deaths",
-      "title": "Deaths"
-    },
-    "color": {
-      "field": "SEX_CODE",
-      "scale": {"range": ["#6A9CED", "#EE862E"]},
-      "legend": {
-        "orient": "bottom",
-        "title": null
+  "transform":[
+    {"filter": {"param": "CountrySelect"}},
+    {"calculate": "datum.SEX_CODE == 'Female' ? -datum.DEATHS : datum.DEATHS", "as": "signed_deaths"},
+    {"calculate": "substring(datum.AGEGROUP_CODE, 6)", "as": "formatted_age_group"}
+  ],
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "formatted_age_group",
+          "sort": "descending",
+          "title": "Age Group"
+        },
+        "x": {
+          "axis": null,
+          "aggregate": "sum", "field": "signed_deaths",
+          "title": "Deaths"
+        },
+        "color": {
+          "field": "SEX_CODE",
+          "scale": {"range": ["#6A9CED", "#EE862E"]},
+          "legend": {
+            "orient": "bottom",
+            "title": null
+          }
+        },
+        "tooltip": [
+          {"field": "SEX_CODE", "type": "nominal", "title": "Gender"},
+          {"field": "AGEGROUP_CODE", "type": "nominal", "title": "Age Group"},
+          {"field": "DEATHS", "type": "quantitative", "title": "Total Deaths", "format": "d"}
+        ]
       }
-    },
-    "tooltip": [
-      {"field": "SEX_CODE", "type": "nominal", "title": "Sex"},
-      {"field": "AGEGROUP_CODE", "type": "nominal", "title": "Age Group"},
-      {"field": "DEATHS", "type": "quantitative", "title": "Total Deaths", "format": ".1f"}
-    ]
-  },
+    }
+  ],
   "config": {
     "view": {"stroke": null},
     "axis": {"grid": false}

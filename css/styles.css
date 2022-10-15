@@ -1,7 +1,16 @@
+body {
+	position: relative;
+}
+
 #butterfly {
 	top: 50px;
 	width: 100%;
 	height: 400px;
+}
+
+#butterflyDescription {
+	font-size: 12px;
+	padding: 0 10px;
 }
 
 #bubble {
@@ -20,15 +29,33 @@
 	height: 400px;
 }
 
+#chartDescription {
+	font-size: 12px;
+	padding: 0 10px;
+}
+
 #countryRow {
 	width: 80%;
 	height: 450px;
 	display: inline-block;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 }
 
 #countryRowContainer {
 	text-align: center;
+	width: 100%;
+}
+
+#countryRowDescription {
+	width: 80%;
+	height: 200px;
+	display: inline-block;
+	margin-bottom: 100px;
+}
+
+#countryRowDescriptionContainer {
+	display: flex;
+	justify-content: center;
 	width: 100%;
 }
 
@@ -56,6 +83,37 @@
 
 #mapContainer {
 	text-align: center;
+}
+
+#heatmapAnnotation {
+	color: #000;
+	font-size: 8px;
+	font-style: italic;
+	position: absolute;
+	top: 1965px;
+	right: 167px;
+	z-index: 100;
+}
+
+#mapAnnotation {
+	color: #ccc;
+	font-size: 10.5px;
+	font-style: italic;
+	position: absolute;
+	top: 265px;
+	right: 310px;
+	z-index: 100;
+}
+
+#subheading {
+	font-size: 15px;
+	font-weight: 500;
+}
+
+#subheadingContainer {
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
 }
 
 #subtitle {
