@@ -1,7 +1,7 @@
 ﻿COUNTRY,COUNTRY_CODE,SEX_CODE,AGEGROUP_CODE,DEATHS
 Australia,AUS,Female,YEARS 0-01,405.8
-Australia,AUS,Female,YEARS 10-14,39.8
-Australia,AUS,Female,YEARS 01-04,55.1
+Australia,AUS,Female,10-14,39.8
+Australia,AUS,Female,01-04,55.1
 Australia,AUS,Female,YEARS 15-19,115.6
 Australia,AUS,Female,YEARS 20-24,134.7
 Australia,AUS,Female,YEARS 25-29,187.1
@@ -569,44 +569,44 @@ Poland,POL,Male,YEARS 70-74,23853.8
 Poland,POL,Male,YEARS 75-79,18622.4
 Poland,POL,Male,YEARS 80-84,23337.4
 Poland,POL,Male,YEARS 85+,35050.6
-Republic of Korea,KOR,Female,YEARS 0-01,426.2
-Republic of Korea,KOR,Female,YEARS 10-14,55.6
-Republic of Korea,KOR,Female,YEARS 01-04,70.4
-Republic of Korea,KOR,Female,YEARS 15-19,204.9
-Republic of Korea,KOR,Female,YEARS 20-24,405.8
-Republic of Korea,KOR,Female,YEARS 25-29,442.7
-Republic of Korea,KOR,Female,YEARS 30-34,606.5
-Republic of Korea,KOR,Female,YEARS 35-39,1044.5
-Republic of Korea,KOR,Female,YEARS 40-44,1340.8
-Republic of Korea,KOR,Female,YEARS 45-49,2173.1
-Republic of Korea,KOR,Female,YEARS 50-54,2692.5
-Republic of Korea,KOR,Female,YEARS 55-59,3810.9
-Republic of Korea,KOR,Female,YEARS 05-09,55.4
-Republic of Korea,KOR,Female,YEARS 60-64,4481.2
-Republic of Korea,KOR,Female,YEARS 65-69,5029.9
-Republic of Korea,KOR,Female,YEARS 70-74,7225.9
-Republic of Korea,KOR,Female,YEARS 75-79,14262.7
-Republic of Korea,KOR,Female,YEARS 80-84,21891.2
-Republic of Korea,KOR,Female,YEARS 85+,48697.8
-Republic of Korea,KOR,Male,YEARS 0-01,535.6
-Republic of Korea,KOR,Male,YEARS 10-14,85.4
-Republic of Korea,KOR,Male,YEARS 01-04,86
-Republic of Korea,KOR,Male,YEARS 15-19,321.1
-Republic of Korea,KOR,Male,YEARS 20-24,599.3
-Republic of Korea,KOR,Male,YEARS 25-29,841.8
-Republic of Korea,KOR,Male,YEARS 30-34,1027.1
-Republic of Korea,KOR,Male,YEARS 35-39,1834.9
-Republic of Korea,KOR,Male,YEARS 40-44,2522.8
-Republic of Korea,KOR,Male,YEARS 45-49,4827.4
-Republic of Korea,KOR,Male,YEARS 50-54,7395.8
-Republic of Korea,KOR,Male,YEARS 55-59,10842.5
-Republic of Korea,KOR,Male,YEARS 05-09,62.6
-Republic of Korea,KOR,Male,YEARS 60-64,12801.3
-Republic of Korea,KOR,Male,YEARS 65-69,12900.7
-Republic of Korea,KOR,Male,YEARS 70-74,15617.1
-Republic of Korea,KOR,Male,YEARS 75-79,22262.6
-Republic of Korea,KOR,Male,YEARS 80-84,23619.4
-Republic of Korea,KOR,Male,YEARS 85+,23611.3
+South Korea,KOR,Female,YEARS 0-01,426.2
+South Korea,KOR,Female,YEARS 10-14,55.6
+South Korea,KOR,Female,YEARS 01-04,70.4
+South Korea,KOR,Female,YEARS 15-19,204.9
+South Korea,KOR,Female,YEARS 20-24,405.8
+South Korea,KOR,Female,YEARS 25-29,442.7
+South Korea,KOR,Female,YEARS 30-34,606.5
+South Korea,KOR,Female,YEARS 35-39,1044.5
+South Korea,KOR,Female,YEARS 40-44,1340.8
+South Korea,KOR,Female,YEARS 45-49,2173.1
+South Korea,KOR,Female,YEARS 50-54,2692.5
+South Korea,KOR,Female,YEARS 55-59,3810.9
+South Korea,KOR,Female,YEARS 05-09,55.4
+South Korea,KOR,Female,YEARS 60-64,4481.2
+South Korea,KOR,Female,YEARS 65-69,5029.9
+South Korea,KOR,Female,YEARS 70-74,7225.9
+South Korea,KOR,Female,YEARS 75-79,14262.7
+South Korea,KOR,Female,YEARS 80-84,21891.2
+South Korea,KOR,Female,YEARS 85+,48697.8
+South Korea,KOR,Male,YEARS 0-01,535.6
+South Korea,KOR,Male,YEARS 10-14,85.4
+South Korea,KOR,Male,YEARS 01-04,86
+South Korea,KOR,Male,YEARS 15-19,321.1
+South Korea,KOR,Male,YEARS 20-24,599.3
+South Korea,KOR,Male,YEARS 25-29,841.8
+South Korea,KOR,Male,YEARS 30-34,1027.1
+South Korea,KOR,Male,YEARS 35-39,1834.9
+South Korea,KOR,Male,YEARS 40-44,2522.8
+South Korea,KOR,Male,YEARS 45-49,4827.4
+South Korea,KOR,Male,YEARS 50-54,7395.8
+South Korea,KOR,Male,YEARS 55-59,10842.5
+South Korea,KOR,Male,YEARS 05-09,62.6
+South Korea,KOR,Male,YEARS 60-64,12801.3
+South Korea,KOR,Male,YEARS 65-69,12900.7
+South Korea,KOR,Male,YEARS 70-74,15617.1
+South Korea,KOR,Male,YEARS 75-79,22262.6
+South Korea,KOR,Male,YEARS 80-84,23619.4
+South Korea,KOR,Male,YEARS 85+,23611.3
 Russia,RUS,Female,YEARS 0-01,3625.2
 Russia,RUS,Female,YEARS 10-14,565.3
 Russia,RUS,Female,YEARS 01-04,559

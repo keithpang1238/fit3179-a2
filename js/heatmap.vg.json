@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "data/deaths_by_country_and_cause_2019.csv"},
-  "title": "Deaths by Country and Cause",
+  "title": "Deaths by Country and Cause (2019)",
   "width": "container",
   "height": "container",
   "mark": "rect",
@@ -36,13 +36,11 @@
     ]
   },
   "config": {
-    "view": {
-      "stroke": "transparent",
-      "strokeWidth": 0
-    },
-    "axis": {
-      "grid": false,
-      "domain": false
-    }
+    "view": {"stroke": "transparent", "strokeWidth": 0},
+    "axis": {"labelFont": "helvetica", "titleFont": "helvetica", "grid": false, "domain": false},
+    "legend": {"labelFont": "helvetica", "titleFont": "helvetica"},
+    "header": {"labelFont": "helvetica", "titleFont": "helvetica"},
+    "mark": {"font": "helvetica"},
+    "title": {"font": "helvetica", "subtitleFont": "helvetica"}
   }
 }

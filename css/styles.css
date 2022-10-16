@@ -2,6 +2,14 @@ body {
 	position: relative;
 }
 
+*{
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.pure-g [class*=pure-u] {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
 #butterfly {
 	top: 50px;
 	width: 100%;
@@ -50,7 +58,6 @@ body {
 	width: 80%;
 	height: 200px;
 	display: inline-block;
-	margin-bottom: 100px;
 }
 
 #countryRowDescriptionContainer {
@@ -62,11 +69,33 @@ body {
 #heatmap {
 	top: 150px;
 	width: 80%;
-	height: 700px;
+	height: 550px;
 }
 
 #heatmapContainer {
 	text-align: center;
+}
+
+#heatmapAnnotation {
+	width: 50%;
+	font-size: 15px;
+}
+
+#heatmapAnnotationContainer {
+	margin-top: 200px;
+	text-align: justify;
+	display: flex;
+	justify-content: center;
+}
+
+#heatmapStarredAnnotation {
+	position: absolute;
+	color: #000;
+	font-size: 8px;
+	font-style: italic;
+	top: 1815px;
+	right: 167px;
+	z-index: 100;
 }
 
 #mainSelectContainer {
@@ -85,19 +114,9 @@ body {
 	text-align: center;
 }
 
-#heatmapAnnotation {
-	color: #000;
-	font-size: 8px;
-	font-style: italic;
-	position: absolute;
-	top: 1965px;
-	right: 167px;
-	z-index: 100;
-}
-
 #mapAnnotation {
 	color: #ccc;
-	font-size: 10.5px;
+	font-size: 9px;
 	font-style: italic;
 	position: absolute;
 	top: 265px;
@@ -124,7 +143,7 @@ body {
 #subtitleContainer {
 	width: 100%;
 	text-align: center;
-	margin-top: 200px;
+	margin-top: 50px;
 }
 
 #title {

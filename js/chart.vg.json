@@ -20,7 +20,7 @@
     },
     "color": {
       "field": "GHE_CAUSE_TITLE",
-      "scale": {"range": ["#022F59", "#44649B", "#6A9CED", "#F6C531", "#DEC7A8", "#EE862E"]},
+      "scale": {"range": ["#648FFF", "#785EF0", "#5ED3F0", "#DC267F", "#FE6100", "#FFB000", "#EE862E"]},
       "title": "Cause of death",
       "legend": {
         "title": null,
@@ -85,5 +85,12 @@
         {"filter": "datum.GHE_CAUSE_TITLE === 'Ischaemic heart disease' || datum.GHE_CAUSE_TITLE === 'Stroke' || datum.GHE_CAUSE_TITLE === 'Chronic obstructive pulmonary disease' || datum.GHE_CAUSE_TITLE === 'Lower respiratory infections' || datum.GHE_CAUSE_TITLE === 'Trachea, bronchus, lung cancers' || datum.GHE_CAUSE_TITLE === 'Alzheimer disease and other dementias'"}
       ]
     }
-  ]
+  ],
+  "config": {
+    "axis": {"labelFont": "helvetica", "titleFont": "helvetica"},
+    "legend": {"labelFont": "helvetica", "titleFont": "helvetica"},
+    "header": {"labelFont": "helvetica", "titleFont": "helvetica"},
+    "mark": {"font": "helvetica"},
+    "title": {"font": "helvetica", "subtitleFont": "helvetica"}
+  }
 }

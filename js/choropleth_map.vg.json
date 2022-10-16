@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Deaths per 100K people in 2019",
+  "title": "Deaths per 100K people (2019)",
   "width": "container",
   "height": "container",
   "projection": {
@@ -66,7 +66,7 @@
         },
         "tooltip": [
           {"field": "country", "type": "nominal", "title": "Country"},
-          {"field": "Grand Total", "type": "quantitative", "title": "Deaths per 100K people"}
+          {"field": "Grand Total", "type": "quantitative", "title": "Deaths per 100K people", "format": ".1f"}
         ]
       }
     },
@@ -99,5 +99,12 @@
         "color": {"value": "black"}
       } 
     }
-  ]
+  ],
+  "config": {
+    "axis": {"labelFont": "helvetica", "titleFont": "helvetica"},
+    "legend": {"labelFont": "helvetica", "titleFont": "helvetica"},
+    "header": {"labelFont": "helvetica", "titleFont": "helvetica"},
+    "mark": {"font": "helvetica"},
+    "title": {"font": "helvetica", "subtitleFont": "helvetica"}
+  }
 }
