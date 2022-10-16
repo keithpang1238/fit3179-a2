@@ -18,7 +18,7 @@ body {
 
 #butterflyDescription {
 	font-size: 12px;
-	padding: 0 10px;
+	padding-right: 10px;
 }
 
 #bubble {
@@ -56,14 +56,32 @@ body {
 
 #countryRowDescription {
 	width: 80%;
-	height: 200px;
 	display: inline-block;
 }
 
 #countryRowDescriptionContainer {
 	display: flex;
 	justify-content: center;
+	margin-bottom: 60px;
 	width: 100%;
+}
+
+#footer {
+	width: 80%;
+	display: inline-block;
+	font-size: 8px;
+}
+
+#footerContainer {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#footer2 {
+	text-align: right;
+	padding: 0 20px;
 }
 
 #heatmap {

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Deaths per 100K people (2019)",
+  "title": "Deaths by Country",
   "width": "container",
   "height": "container",
   "projection": {

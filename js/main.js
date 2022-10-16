@@ -33,5 +33,5 @@ function mainSelectFunc() {
             element.fireEvent("onchange");
         }
     });
-    document.getElementById("subtitle").innerHTML = `Death statistics for ${['Netherlands', 'UK', 'USA'].includes(country) ? 'the' : ''} ${country}`
-  }
+    document.getElementById("subtitle").innerHTML = `Death statistics for ${['Netherlands', 'UK', 'USA'].includes(country) ? 'the' : ''} ${country}`;
+}

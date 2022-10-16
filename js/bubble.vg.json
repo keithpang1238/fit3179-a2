@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "data/average_age_sex_ratio_and_deaths_per_country.csv"},
-  "title": "Deaths by Country, Average Age and Gender (2019)",
+  "title": "Deaths by Country, Average Age and Gender",
   "width": "container",
   "height": "container",
   "transform": [

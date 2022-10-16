@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "data/deaths_by_country_and_cause_2019.csv"},
-  "title": "Deaths by Country and Cause (2019)",
+  "title": "Deaths by Country and Cause",
   "width": "container",
   "height": "container",
   "mark": "rect",

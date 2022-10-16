@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "data/deaths_by_age_and_sex_2019.csv"},
-  "title": "Deaths by Gender and Age Group (2019)",
+  "title": "Deaths by Gender and Age Group",
   "width": "container",
   "height": "container",
   "params": [
