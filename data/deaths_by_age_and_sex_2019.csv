@@ -1,7 +1,7 @@
 ﻿COUNTRY,COUNTRY_CODE,SEX_CODE,AGEGROUP_CODE,DEATHS
 Australia,AUS,Female,YEARS 0-01,405.8
-Australia,AUS,Female,10-14,39.8
-Australia,AUS,Female,01-04,55.1
+Australia,AUS,Female,YEARS 10-14,39.8
+Australia,AUS,Female,YEARS 01-04,55.1
 Australia,AUS,Female,YEARS 15-19,115.6
 Australia,AUS,Female,YEARS 20-24,134.7
 Australia,AUS,Female,YEARS 25-29,187.1
